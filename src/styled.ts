@@ -22,11 +22,8 @@ export const AppContainer = styled.div`
 `;
 
 export const TextShadow = styled.h1`
-font-size: 20px;
+font-size: 1.8em;
   text-decoration: underline;
-  @media (max-width: 768px) {
-    font-size: 1.3em;
-  }
   font-family: "Alumni Sans", sans-serif;
   font-style: italic;
   text-transform: uppercase;
@@ -36,7 +33,7 @@ font-size: 20px;
   text-shadow: 2px 2px 10px #2962ff;
   transition: all 0.5s ease-in-out;
   text-align: center;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.2rem;
   -webkit-animation: ${flicker} 0.5s ease-in-out infinite alternate;
           animation: ${flicker} 0.5s ease-in-out infinite alternate;
   &:hover {

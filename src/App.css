@@ -1,5 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@400;600;700&display=swap");
+
 .App {
   text-align: center;
+  font-family: "Montserrat", "Mukta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .App-logo {
@@ -36,3 +43,4 @@
     transform: rotate(360deg);
   }
 }
+

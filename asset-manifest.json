@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/pdf-generator-web/static/css/main.d65d2328.css",
-    "main.js": "/pdf-generator-web/static/js/main.276d566c.js",
+    "main.js": "/pdf-generator-web/static/js/main.400a3f1b.js",
     "static/js/453.5fa936ec.chunk.js": "/pdf-generator-web/static/js/453.5fa936ec.chunk.js",
     "index.html": "/pdf-generator-web/index.html",
     "main.d65d2328.css.map": "/pdf-generator-web/static/css/main.d65d2328.css.map",
-    "main.276d566c.js.map": "/pdf-generator-web/static/js/main.276d566c.js.map",
+    "main.400a3f1b.js.map": "/pdf-generator-web/static/js/main.400a3f1b.js.map",
     "453.5fa936ec.chunk.js.map": "/pdf-generator-web/static/js/453.5fa936ec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d65d2328.css",
-    "static/js/main.276d566c.js"
+    "static/js/main.400a3f1b.js"
   ]
 }

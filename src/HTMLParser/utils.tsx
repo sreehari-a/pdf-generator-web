@@ -4,6 +4,7 @@ const baseUrl = process.env.REACT_APP_BACKEND_URL;
 
 export const convertToPDF = async (html: string, data: any, setError: (err: string) => void) => {
   try {
+    console.log(process.env)
     const response = await fetch(`${baseUrl}/utils/pdf/generate-pdf`, {
       method: "POST",
       headers: {

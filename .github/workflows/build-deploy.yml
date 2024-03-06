@@ -31,7 +31,7 @@ jobs:
     - name: Build project
       run: CI=false npm run build
       env:
-        REACT_APP_BACKEND_URL: ${{ vars.REACT_APP_BACKEND_URL }}
+        REACT_APP_BACKEND_URL: ${{ secrets.REACT_APP_BACKEND_URL }}
 
     - name: Upload production-ready build files
       uses: actions/upload-artifact@v2

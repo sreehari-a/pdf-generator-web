@@ -10,6 +10,7 @@ import VariableSection from "./VariableSection";
 import { DropdownItem } from "../components/Select";
 import { Button as ModalButton, Modal } from "antd";
 import styled from "styled-components";
+import AppLoader from "../components/AppLoader";
 const StyledModal = styled(Modal)`
   .ant-modal-header {
     background-color: #c10000;
@@ -18,13 +19,13 @@ const StyledModal = styled(Modal)`
     height: 37px;
     padding: 7px;
     margin: 0;
-    font-family: "Montserrat", "Mukta", sans-serif
+    font-family: "Montserrat", "Mukta", sans-serif;
   }
   .ant-modal-title {
-
     color: white;
   }
-  .ant-modal-body, .ant-modal-footer {
+  .ant-modal-body,
+  .ant-modal-footer {
     padding: 7px;
     margin-top: 0;
     background-color: ${(props) => props.theme.colors?.primary};
@@ -65,6 +66,7 @@ Address: <span th:text=\"\${address}\"></span>
   const [variableObj, setVariableObj] = useState<any>({});
   const [htmlError, setHTMLError] = useState("");
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     generateVariables();
@@ -82,10 +84,12 @@ Address: <span th:text=\"\${address}\"></span>
   };
 
   const generatePdf = async () => {
+    setLoading(true);
     const url = await convertToPDF(htmlText, variableObj, setHTMLError);
     if (url) {
       setPdfUrl(url);
     }
+    setLoading(false);
   };
 
   const onChangeHTML = (value: string = "") => {
@@ -156,11 +160,12 @@ Address: <span th:text=\"\${address}\"></span>
           </TextAreaPanel>
         </FormElement>
         <FormElement>
-          {pdfUrl && (
+          {pdfUrl && !loading && (
             <ViewerContainer>
               <PdfViewer pdfUrl={pdfUrl} />
             </ViewerContainer>
           )}
+          {loading && <AppLoader loaderText="Generating PDF"/>}
         </FormElement>
       </Form>
       <StyledModal
@@ -175,8 +180,7 @@ Address: <span th:text=\"\${address}\"></span>
             }}
             variant={ButtonVariants.NORMAL}
             buttonText="OK"
-          >
-          </Button>,
+          ></Button>,
         ]}
       >
         {htmlError}

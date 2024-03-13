@@ -51,6 +51,7 @@ export const VariableSections = styled.div`
 `
 
 export const SelectContainer = styled.div`
+padding-right: 5px;
 width: 40%;
 `
 export const ValueSection = styled.div`

@@ -7,7 +7,7 @@ import { useState } from "react";
 import Toggle from "./components/ThemeToggle";
 
 export const Themes = {
-  light: theme.lightTheme2,
+  light: theme.lightTheme,
   dark: theme.darkTheme,
 };
 

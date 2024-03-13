@@ -1,10 +1,11 @@
 const lightTheme = {
   colors: {
     primary: "#FFF",
-    secondary: "#064ACB",
+    secondary: "#194aae",
     primaryLight: '#e1e1e1',
     primaryDark: '#e1e1e1',
-    secondaryVariant: "#053ca8",
+    secondaryVariant: "#072768",
+    primaryVariant: "#DEEBFF",
     text: "#000",
     secondaryText: "#FFF",
     headerShadow: "0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12)",
@@ -17,6 +18,7 @@ const lightTheme2 = {
     primaryLight: '#9faeff',
     primaryDark: "#7075d8",
     secondaryVariant: "#053ca8",
+    primaryVariant: "#bdc7ff",
     text: "#000",
     secondaryText: "#FFF",
     headerShadow: "0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12)",
@@ -30,6 +32,7 @@ const darkTheme = {
     primaryLight: '#232D3F',
     primaryDark: '#232D3F',
     secondaryVariant: "purple",
+    primaryVariant: "#232D3F",
     secondaryText: "#EDE1AC",
     headerShadow: "none",
   },
@@ -45,6 +48,7 @@ const darkTheme2 = {
       primaryLight: '#232D3F',
       primaryDark: '#232D3F',
       secondaryVariant: "#161616",
+      primaryVariant: "#232D3F",
       headerShadow: "none",
     },
   };

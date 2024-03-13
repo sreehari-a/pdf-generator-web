@@ -12,7 +12,9 @@ export const StyledInput = styled.input<InputProps>`
   width: 100%;
   box-sizing: border-box;
   height: 2.4rem;
-
+  background-color: transparent;
+  color: ${(props) => props.theme.colors?.text};
+  border: 1px solid ${(props) => props.theme.colors?.text};
   ${(props) =>
     props.hasError &&
     `

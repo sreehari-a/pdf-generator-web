@@ -73,9 +73,10 @@ Address: <span th:text=\"\${address}\"></span>
   }, [htmlText]);
 
   const generateVariables = () => {
-    const matches = htmlText.match(/\{([^}]+)\}/g);
+    const matches = htmlText.match(/\$\{([^}]*)\}/g);
+    console.log(matches);
     const textsWithinCurlyBraces =
-      matches?.map((match) => match.slice(1, -1)) || [];
+      matches?.map((match) => match.slice(2, -1)) || [];
     const varOptions = textsWithinCurlyBraces.map((text) => ({
       label: text,
       value: text,

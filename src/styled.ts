@@ -30,14 +30,24 @@ font-size: 1.8em;
   color: transparent;
   -webkit-text-stroke: #fff;
   -webkit-text-stroke-width: 1px;
-  text-shadow: 2px 2px 10px #2962ff;
+  text-shadow: 2px 2px 10px ${(props) => props.theme.colors?.secondary};
   transition: all 0.5s ease-in-out;
   text-align: center;
   letter-spacing: 0.2rem;
-  -webkit-animation: ${flicker} 0.5s ease-in-out infinite alternate;
-          animation: ${flicker} 0.5s ease-in-out infinite alternate;
+  -webkit-animation: flicker 2s ease-in-out infinite alternate;
+          animation: flicker 2s ease-in-out infinite alternate;
   &:hover {
     color: #fff;
+  }
+  @keyframes flicker {
+    0% {
+      opacity: 0.5;
+      text-shadow: 2px 2px 10px #2962ff;
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 2px 2px 20px ${(props) => props.theme.colors?.secondary};
+    }
   }
 `
 export const AppHeader = styled.div`

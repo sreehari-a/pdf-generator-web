@@ -52,6 +52,7 @@ const VariableAdditionSection = ({
   isNewSection = false,
   deleteVariable,
 }: VariableAddSectionProps) => {
+  const theme = useTheme();
   const [keyValue, setKeyValue] = useState({
     key: variable,
     value: variableObject[variable],
@@ -98,6 +99,28 @@ const VariableAdditionSection = ({
               ...provided,
               padding: "2px",
             }),
+            menu: (provided) => ({
+              ...provided,
+              backgroundColor: "transparent",
+              borderColor: theme.colors.text
+            }),
+            control: (provided) => ({
+              ...provided,
+              backgroundColor: "transparent",
+              border: `1px solid ${theme.colors.text}`
+            }),
+            singleValue: (provided) => ({
+              ...provided,
+              color: theme.colors.text,
+            }),
+            option: (provided) => ({
+              ...provided,
+              backgroundColor: "transparent",
+              color: theme.colors.text,
+              ":hover": {
+                backgroundColor: theme.colors.primaryVariant,
+              }
+            }),
           }}
         />
       </SelectContainer>
@@ -109,7 +132,7 @@ const VariableAdditionSection = ({
       <ButtonGroup>
         <div>
           <IconButton
-            color={"green"}
+            bgColor={"green"}
             hoverColor="darkgreen"
             onClick={saveValue}
             disabled={!isValid}
@@ -119,7 +142,7 @@ const VariableAdditionSection = ({
         </div>
         <div>
           <IconButton
-            color={"red"}
+            bgColor={"red"}
             hoverColor="darkred"
             onClick={() => deleteVariable(keyValue.key)}
           >
